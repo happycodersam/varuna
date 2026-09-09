@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1280</width><height>800</height></rect></property>
+  <property name="windowTitle"><string>MarineVision</string></property>
+  <property name="styleSheet"><string notr="true">
+* { font-family: Barlow, Segoe UI, Arial, sans-serif; font-size: 13px; }
+QMainWindow, QWidget#centralwidget { background: #f4f6fb; }
+QWidget#navbar { background: #fff; border-bottom: 1px solid #d0d8ee; min-height: 62px; max-height: 62px; }
+QPushButton#logoBtn { background: transparent; border: none; font-size: 15px; font-weight: 700; color: #0c0d11; }
+QPushButton#navBtn { background: transparent; border: none; font-size: 14px; color: #6070a0; padding: 6px 14px; border-radius: 6px; }
+QPushButton#navBtn:hover { color: #0c0d11; }
+QPushButton#ctaBtn { background: #3d5cd8; color: #fff; border: none; border-radius: 100px; padding: 8px 20px; font-weight: 600; }
+QPushButton#ctaBtn:hover { background: #2e48b8; }
+QWidget#heroSection { background: qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #0c0d11,stop:0.6 #1a2340,stop:1 #263668); min-height: 480px; }
+QLabel#heroTitle { color: #fff; font-size: 42px; font-weight: 800; background: transparent; }
+QLabel#heroSub { color: rgba(255,255,255,0.6); font-size: 15px; background: transparent; }
+QLabel#heroEyebrow { color: rgba(255,255,255,0.5); font-size: 12px; background: transparent; }
+QLabel#statVal { color: #fff; font-size: 28px; font-weight: 800; background: transparent; }
+QLabel#statLabel { color: rgba(255,255,255,0.5); font-size: 12px; background: transparent; }
+QPushButton#heroPrimary { background: #3d5cd8; color: #fff; border: none; border-radius: 100px; padding: 12px 26px; font-size: 14px; font-weight: 600; }
+QPushButton#heroPrimary:hover { background: #2e48b8; }
+QPushButton#heroGhost { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 12px 24px; font-size: 14px; }
+QLabel#sectionTitle { color: #0c0d11; font-size: 24px; font-weight: 700; background: transparent; }
+QLabel#sectionEyebrow { color: #6070a0; font-size: 12px; font-weight: 500; background: transparent; }
+QLabel#capTitle { color: #0c0d11; font-size: 14px; font-weight: 700; background: transparent; }
+QLabel#capDesc { color: #6070a0; font-size: 12px; background: transparent; }
+QFrame#capCard { background: #fff; border: 1px solid #d0d8ee; border-radius: 10px; }
+QWidget#pageHeader { background: #fff; border-bottom: 1px solid #d0d8ee; }
+QLabel#pageTitle { color: #0c0d11; font-size: 24px; font-weight: 700; background: transparent; }
+QLabel#pageSub { color: #6070a0; font-size: 13px; background: transparent; }
+QLabel#pageEyebrow { color: #6070a0; font-size: 12px; background: transparent; }
+QPushButton#btnPrimary { background: #3d5cd8; color: #fff; border: none; border-radius: 100px; padding: 10px 22px; font-weight: 600; }
+QPushButton#btnPrimary:hover { background: #2e48b8; }
+QTableWidget { background: #fff; border: 1px solid #d0d8ee; border-radius: 10px; gridline-color: #d0d8ee; }
+QTableWidget::item { padding: 10px 14px; }
+QTableWidget::item:selected { background: #e8edf8; color: #0c0d11; }
+QHeaderView::section { background: #f4f6fb; color: #6070a0; font-size: 10px; font-weight: 700; padding: 8px 14px; border: none; border-bottom: 1px solid #d0d8ee; }
+QLineEdit, QComboBox { background: #fff; border: 1px solid #d0d8ee; border-radius: 8px; padding: 8px 12px; color: #0c0d11; }
+QLineEdit:focus, QComboBox:focus { border-color: #3d5cd8; }
+QCheckBox { spacing: 8px; color: #0c0d11; }
+QCheckBox::indicator { width: 16px; height: 16px; border-radius: 4px; border: 1.5px solid #d0d8ee; background: #fff; }
+QCheckBox::indicator:checked { background: #3d5cd8; border-color: #3d5cd8; }
+QSlider::groove:horizontal { height: 4px; background: #d0d8ee; border-radius: 2px; }
+QSlider::handle:horizontal { background: #3d5cd8; width: 14px; height: 14px; margin: -5px 0; border-radius: 7px; }
+QSlider::sub-page:horizontal { background: #3d5cd8; border-radius: 2px; }
+QScrollBar:vertical { width: 4px; background: transparent; }
+QScrollBar::handle:vertical { background: #8090c8; border-radius: 2px; min-height: 24px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+  </string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing"><number>0</number></property>
+    <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+    <item>
+     <widget class="QWidget" name="navbar">
+      <layout class="QHBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>0</number></property><property name="spacing"><number>4</number></property>
+       <item><widget class="QPushButton" name="logoBtn"><property name="text"><string>MarineVision</string></property></widget></item>
+       <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Fixed</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>0</height></size></property></spacer></item>
+       <item><widget class="QPushButton" name="navHome"><property name="objectName"><string>navBtn</string></property><property name="text"><string>Home</string></property></widget></item>
+       <item><widget class="QPushButton" name="navAnalyze"><property name="objectName"><string>navBtn</string></property><property name="text"><string>Analyze</string></property></widget></item>
+       <item><widget class="QPushButton" name="navMap"><property name="objectName"><string>navBtn</string></property><property name="text"><string>Map</string></property></widget></item>
+       <item><widget class="QPushButton" name="navReports"><property name="objectName"><string>navBtn</string></property><property name="text"><string>Reports</string></property></widget></item>
+       <item><widget class="QPushButton" name="navDataset"><property name="objectName"><string>navBtn</string></property><property name="text"><string>Dataset</string></property></widget></item>
+       <item><widget class="QPushButton" name="navConfig"><property name="objectName"><string>navBtn</string></property><property name="text"><string>Config</string></property></widget></item>
+       <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>0</height></size></property></spacer></item>
+       <item><widget class="QPushButton" name="ctaBtn"><property name="text"><string>Analyze Data</string></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="QWidget" name="homePage">
+       <layout class="QVBoxLayout"><property name="spacing"><number>0</number></property><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+        <item>
+         <widget class="QWidget" name="heroSection">
+          <layout class="QVBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>72</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>64</number></property><property name="spacing"><number>14</number></property>
+           <item><widget class="QLabel" name="heroEyebrow"><property name="text"><string>◉  MarineVision · Underwater Intelligence</string></property></widget></item>
+           <item><widget class="QLabel" name="heroTitle"><property name="text"><string>AI-Powered Sonar Detection &amp; Mapping</string></property></widget></item>
+           <item><widget class="QLabel" name="heroSub"><property name="text"><string>Real-time underwater debris detection using YOLOv8 trained on side-scan sonar imagery.</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+           <item><layout class="QHBoxLayout"><property name="spacing"><number>12</number></property><item><widget class="QPushButton" name="heroAnalyzeBtn"><property name="objectName"><string>heroPrimary</string></property><property name="text"><string>Analyze Sonar Data</string></property></widget></item><item><widget class="QPushButton" name="heroMapBtn"><property name="objectName"><string>heroGhost</string></property><property name="text"><string>View Mission Map</string></property></widget></item><item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>0</height></size></property></spacer></item></layout></item>
+           <item><layout class="QHBoxLayout"><property name="spacing"><number>0</number></property><item><layout class="QVBoxLayout"><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>32</number></property><property name="bottomMargin"><number>0</number></property><item><widget class="QLabel" name="s0v"><property name="objectName"><string>statVal</string></property><property name="text"><string>595</string></property></widget></item><item><widget class="QLabel" name="s0l"><property name="objectName"><string>statLabel</string></property><property name="text"><string>Sonar Frames</string></property></widget></item></layout></item><item><layout class="QVBoxLayout"><property name="leftMargin"><number>32</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>32</number></property><property name="bottomMargin"><number>0</number></property><item><widget class="QLabel" name="s1v"><property name="objectName"><string>statVal</string></property><property name="text"><string>4</string></property></widget></item><item><widget class="QLabel" name="s1l"><property name="objectName"><string>statLabel</string></property><property name="text"><string>Object Classes</string></property></widget></item></layout></item><item><layout class="QVBoxLayout"><property name="leftMargin"><number>32</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>32</number></property><property name="bottomMargin"><number>0</number></property><item><widget class="QLabel" name="s2v"><property name="objectName"><string>statVal</string></property><property name="text"><string>87.7%</string></property></widget></item><item><widget class="QLabel" name="s2l"><property name="objectName"><string>statLabel</string></property><property name="text"><string>Avg Confidence</string></property></widget></item></layout></item><item><layout class="QVBoxLayout"><property name="leftMargin"><number>32</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property><item><widget class="QLabel" name="s3v"><property name="objectName"><string>statVal</string></property><property name="text"><string>124ms</string></property></widget></item><item><widget class="QLabel" name="s3l"><property name="objectName"><string>statLabel</string></property><property name="text"><string>Inference Time</string></property></widget></item></layout></item><item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>0</height></size></property></spacer></item></layout></item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="capsSection">
+          <layout class="QVBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>48</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>48</number></property><property name="spacing"><number>18</number></property>
+           <item><widget class="QLabel"><property name="objectName"><string>sectionEyebrow</string></property><property name="text"><string>◉  Platform Capabilities</string></property></widget></item>
+           <item><widget class="QLabel"><property name="objectName"><string>sectionTitle</string></property><property name="text"><string>What MarineVision can do</string></property></widget></item>
+           <item><layout class="QHBoxLayout"><property name="spacing"><number>16</number></property>
+            <item><widget class="QFrame" name="c0"><property name="objectName"><string>capCard</string></property><layout class="QVBoxLayout"><property name="leftMargin"><number>20</number></property><property name="topMargin"><number>22</number></property><property name="rightMargin"><number>20</number></property><property name="bottomMargin"><number>22</number></property><item><widget class="QLabel"><property name="objectName"><string>capTitle</string></property><property name="text"><string>Real-time Sonar Analysis</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>capDesc</string></property><property name="text"><string>Process side-scan sonar with AI in under 200ms per frame.</string></property><property name="wordWrap"><bool>true</bool></property></widget></item></layout></widget></item>
+            <item><widget class="QFrame" name="c1"><property name="objectName"><string>capCard</string></property><layout class="QVBoxLayout"><property name="leftMargin"><number>20</number></property><property name="topMargin"><number>22</number></property><property name="rightMargin"><number>20</number></property><property name="bottomMargin"><number>22</number></property><item><widget class="QLabel"><property name="objectName"><string>capTitle</string></property><property name="text"><string>Multi-class Detection</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>capDesc</string></property><property name="text"><string>Identify pipelines, shipwrecks, ghost nets, mines with YOLOv8.</string></property><property name="wordWrap"><bool>true</bool></property></widget></item></layout></widget></item>
+            <item><widget class="QFrame" name="c2"><property name="objectName"><string>capCard</string></property><layout class="QVBoxLayout"><property name="leftMargin"><number>20</number></property><property name="topMargin"><number>22</number></property><property name="rightMargin"><number>20</number></property><property name="bottomMargin"><number>22</number></property><item><widget class="QLabel"><property name="objectName"><string>capTitle</string></property><property name="text"><string>Geospatial Mapping</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>capDesc</string></property><property name="text"><string>Plot detections on maps with GPS-accurate coordinates.</string></property><property name="wordWrap"><bool>true</bool></property></widget></item></layout></widget></item>
+            <item><widget class="QFrame" name="c3"><property name="objectName"><string>capCard</string></property><layout class="QVBoxLayout"><property name="leftMargin"><number>20</number></property><property name="topMargin"><number>22</number></property><property name="rightMargin"><number>20</number></property><property name="bottomMargin"><number>22</number></property><item><widget class="QLabel"><property name="objectName"><string>capTitle</string></property><property name="text"><string>Mission Reporting</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>capDesc</string></property><property name="text"><string>Auto-generate PDF, CSV, JSON reports with detection metadata.</string></property><property name="wordWrap"><bool>true</bool></property></widget></item></layout></widget></item>
+           </layout></item>
+          </layout>
+         </widget>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>0</width><height>20</height></size></property></spacer></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="analyzePage">
+       <layout class="QVBoxLayout"><property name="spacing"><number>0</number></property><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QWidget" name="analyzeHeader"><property name="objectName"><string>pageHeader</string></property><layout class="QHBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>20</number></property><item><layout class="QVBoxLayout"><property name="spacing"><number>3</number></property><item><widget class="QLabel"><property name="objectName"><string>pageEyebrow</string></property><property name="text"><string>◉  Analysis Pipeline</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageTitle</string></property><property name="text"><string>Analyze Sonar Data</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageSub</string></property><property name="text"><string>Load a sonar image or mission log and run AI detection.</string></property></widget></item></layout></item><item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>0</height></size></property></spacer></item><item><widget class="QPushButton" name="runDetectionBtn"><property name="objectName"><string>btnPrimary</string></property><property name="text"><string>Run Detection</string></property></widget></item></layout></widget></item>
+        <item><widget class="QLabel"><property name="text"><string>Sonar canvas and detection results shown here.</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>color:#6070a0;font-size:14px;</string></property></widget></item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>0</width><height>20</height></size></property></spacer></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mapPage">
+       <layout class="QVBoxLayout"><property name="spacing"><number>0</number></property><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QWidget" name="mapHeader"><property name="objectName"><string>pageHeader</string></property><layout class="QHBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>20</number></property><item><layout class="QVBoxLayout"><property name="spacing"><number>3</number></property><item><widget class="QLabel"><property name="objectName"><string>pageEyebrow</string></property><property name="text"><string>◉  Geospatial View</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageTitle</string></property><property name="text"><string>Mission Map</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageSub</string></property><property name="text"><string>View detections on a geospatial map with sonar tracks.</string></property></widget></item></layout></item></layout></widget></item>
+        <item><widget class="QLabel"><property name="text"><string>[ Integrate Folium or QWebEngineView here ]</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>color:#6070a0;font-size:14px;</string></property></widget></item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>0</width><height>20</height></size></property></spacer></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="reportsPage">
+       <layout class="QVBoxLayout"><property name="spacing"><number>0</number></property><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QWidget" name="reportsHeader"><property name="objectName"><string>pageHeader</string></property><layout class="QHBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>20</number></property><item><layout class="QVBoxLayout"><property name="spacing"><number>3</number></property><item><widget class="QLabel"><property name="objectName"><string>pageEyebrow</string></property><property name="text"><string>◉  Mission Output</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageTitle</string></property><property name="text"><string>Mission Reports</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageSub</string></property><property name="text"><string>View, filter and export detection results.</string></property></widget></item></layout></item><item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>0</height></size></property></spacer></item><item><widget class="QPushButton" name="generateReportBtn"><property name="objectName"><string>btnPrimary</string></property><property name="text"><string>Generate Report</string></property></widget></item></layout></widget></item>
+        <item><widget class="QWidget" name="reportsContent"><layout class="QVBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>24</number></property><item><widget class="QTableWidget" name="reportsTable"><property name="columnCount"><number>6</number></property><property name="rowCount"><number>4</number></property></widget></item></layout></widget></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="datasetPage">
+       <layout class="QVBoxLayout">
+        <property name="spacing"><number>0</number></property>
+        <property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QWidget" name="datasetHeader"><property name="objectName"><string>pageHeader</string></property><layout class="QHBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>20</number></property><item><layout class="QVBoxLayout"><property name="spacing"><number>3</number></property><item><widget class="QLabel"><property name="objectName"><string>pageEyebrow</string></property><property name="text"><string>◉  Data Management</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageTitle</string></property><property name="text"><string>Dataset</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageSub</string></property><property name="text"><string>Manage sonar frames, annotations, and model training data.</string></property></widget></item></layout></item><item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property></spacer></item><item><widget class="QPushButton" name="importDatasetBtn"><property name="objectName"><string>btnPrimary</string></property><property name="text"><string>Import Dataset</string></property></widget></item></layout></widget></item>
+        <item><widget class="QLabel" name="datasetPlaceholder"><property name="text"><string>Sonar dataset and annotation management will appear here.</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>color:#6070a0;font-size:14px;</string></property></widget></item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property></spacer></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="configPage">
+       <layout class="QVBoxLayout"><property name="spacing"><number>0</number></property><property name="leftMargin"><number>0</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property><property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QWidget" name="configHeader"><property name="objectName"><string>pageHeader</string></property><layout class="QVBoxLayout"><property name="leftMargin"><number>48</number></property><property name="topMargin"><number>28</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>20</number></property><item><widget class="QLabel"><property name="objectName"><string>pageEyebrow</string></property><property name="text"><string>◉  System Settings</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageTitle</string></property><property name="text"><string>Configuration</string></property></widget></item><item><widget class="QLabel"><property name="objectName"><string>pageSub</string></property><property name="text"><string>Configure model, confidence threshold, and mission settings.</string></property></widget></item></layout></widget></item>
+        <item><widget class="QLabel" name="configPlaceholder"><property name="text"><string>Model and mission configuration options will appear here.</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>color:#6070a0;font-size:14px;</string></property></widget></item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Expanding</enum></property></spacer></item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  </widget>
+<resources />
+  <connections />
+ </ui>
